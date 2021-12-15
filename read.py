@@ -1,13 +1,6 @@
-#讀取中文檔案 需加encoding = "utf-8"
-with open("name.txt", "a", encoding = "utf-8") as n:
-	while True:
-		f = input("請輸入文字: ")
-		if f == "q":
-			n.write("\n")
-			break		
-		n.write(f)
-		n.write("\n")
+data = []
 
-with open("name.txt", "r", encoding = "utf-8") as n:
-	for line in n:
-		print(line.strip())
+with open("reviews.txt", "r") as r:
+	for line in r:
+		data.append(line)
+print(len(data)) 
